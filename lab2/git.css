@@ -1,21 +1,23 @@
+
 * {
-    padding:0px;
-    margin:0px;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
 }
 body {
-    background: #f6f8fa;
+    background: white;
     color: #24292f;
-}
-.page {
     max-width: 1200px;
     margin: 0 auto;
     padding: 56px 24px 80px;
     text-align: center;
 }
+.hero {
+    margin-bottom: 24px;
+}
 h1.title {
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 800;
     letter-spacing: -1px;
     margin-bottom: 16px;
@@ -24,12 +26,12 @@ h1.title {
     max-width: 860px;
     margin: 0 auto 24px;
     color: #57606a;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
 }
 .cta {
     display: inline-block;
-    background: #1f2328;
+    background: linear-gradient(rgb(61, 61, 61), black);
     color: #fff;
     padding: 12px 22px;
     border-radius: 8px;
@@ -38,28 +40,161 @@ h1.title {
     margin-bottom: 44px;
 }
 
+
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+    justify-content: center;
+}
+.card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(27, 31, 36, 0.5);
+}
+.price {
+    margin-top: 20px;
+    font-family: "Mona Sans";
+    margin-bottom: 10px;
+}
+.pum {
+
+    position: relative;
+    top: -0.5em;
+}
+.price-num {
+    font-size: 48px;
+    font-weight: 600;;
+}
+.price sup{
+    color: rgb(130, 130, 130);
+    font-family: "Mona Sans";
+    font-size: 20px;
+    position: relative;
+    top: -0.9em;
+    padding-right:4px;
+}
+.price sub{
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    top: -0.2em;
+    padding: 0 5px;
+}
+.button a{
+    text-decoration: none;
+    display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.button {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+  }
+.black-button {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    background: linear-gradient(rgb(61, 61, 61), black);
+    color: white;
+    margin-bottom: 44px;
+}
+.white-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(142, 142, 142);
+    text-decoration: none;
+    margin-bottom: 44px;
+}
+
+details { 
+    border: 0; 
+}
+.details-list {
+    text-align: left;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 14px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2d333b;
+    padding: 4px 0;
+}
+
+summary::before {
+    content: "›";
+    transform: translateY(-1px);
+    color: #57606a;
+    font-size: 18px;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.detail-body {
+    color: #57606a;
+    padding: 6px 0 4px 20px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
 .addons {
     margin-top: 64px;
     text-align: center;
 }
 .addons h2 {
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 800;
     margin-bottom: 24px;
 }
 .addon-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 24px;
     margin-top: 12px;
 }
 .addon-card {
     background: #fff;
     border: 1px solid #d0d7de;
-    border-radius: 12px;
-    padding: 22px;
+    border-radius: 7px;
+    padding: 30px;
     text-align: left;
     box-shadow: 0 4px 12px rgba(27, 31, 36, 0.08);
+    transition: 0.3s ease;
+}
+.addon-card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(27, 31, 36, 0.16);
 }
 .addon-icon {
     width: 40px;
@@ -74,251 +209,30 @@ h1.title {
     color: #1f6feb;
 }
 .addon-card h3 {
-    font-size: 18px;
-    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 .addon-card p {
     color: #57606a;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 12px;
 }
 .addon-card a {
-    color: #24292f;
+    color:black;
     text-decoration: none;
     font-weight: 600;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 6px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s;
-    text-align: center;
-}
-
-.btn-primary {
-    background-color: #33373A;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #33373A;
-    text-decoration: none;
-}
-
-.btn-outline {
-    background-color: white;
-    color: #24292f;
-    border-color: #d0d7de;
-}
-
-.btn-outline:hover {
-    background-color: #f6f8fa;
-    text-decoration: none;
-}
-
-.btn-large {
-    padding: 16px 32px;
-    font-size: 18px;
-}
-
-.site-header {
-    
-    border-bottom: 1px solid #d0d7de;
-    padding: 16px 0;
-    background-color: white;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 32px;
-}
-
-.main-nav a {
-    
-    color: #24292f;
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 24px;
-}
-
-.main-nav a:hover {
-    color: #0969da;
-}
-.src{
-    margin-left:500px;
-    background-color: #FFFFFF;
-    border-color:#F2F2F3;
-    border-radius: 6px;
-    border:30%;
-    padding:6px;
-    width:300px;
-
-}
-.dashboard{
-    background-color: #FFFFFF;
-    border-color:#F2F2F3;
-    border-radius: 6px;
-    border:25%;
-    padding:6px;
-}
-.hero-banner {
-    background: linear-gradient(135deg, #f6fff9 0%, #f0f9ff 100%);
-    border-bottom: 1px solid #d0d7de;
-    padding: 64px 0;
-    text-align: center;
-}
-
-.hero-title {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 16px;
-    color: #0d1117;
-}
-
-.hero-subtitle {
-    font-size: 20px;
-    color: #57606a;
-    max-width: 800px;
-    margin: 0 auto 32px;
-}
-
-.pricing-section {
-    padding: 80px 0;
-}
-
-.section-title {
-    font-size: 32px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 48px;
-    color: #0d1117;
-}
-
-.plans-container {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.plan-card {
-    flex: 1;
-    min-width: 300px;
-    max-width: 380px;
-    border: 1px solid #d0d7de;
-    border-radius: 12px;
-    padding: 32px;
-    background-color: white;
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.plan-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
-}
-
-.plan-card.featured {
-    border-top: 4px solid white;
-}
-
-.plan-card .feat{
-    border-top: 10px solid blue;
-}
-
-.plan-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.plan-description {
-    color: #57606a;
-    margin-bottom: 24px;
-    font-size: 14px;
-}
-
-
-.price {
-    margin-bottom: 24px;
-}
-
-.price-amount {
-    font-size: 40px;
-    font-weight: 800;
-    color: #0d1117;
-}
-
-.price-period {
-    color: #57606a;
-    font-size: 14px;
-}
-
-.price-note {
-    color: #57606a;
-    font-size: 12px;
-    font-style: italic;
-    margin-top: 4px;
-}
-
-.plan-features {
-    list-style: none;
-    margin-bottom: 32px;
-}
-
-.plan-features li {
-    padding: 8px 0;
-    border-bottom: 1px solid #f6f8fa;
-    font-size: 14px;
-}
-
-.plan-features li:last-child {
-    border-bottom: none;
-}
-
-.plan-features i {
-    color: #1f883d;
-    margin-right: 8px;
-}
-
-.addons {
-    margin-top: 32px;
-    padding-top: 24px;
-    border-top: 1px dashed #d0d7de;
-}
-
-.addons-title {
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color:blue;
-    margin-bottom: 12px;
-}
-
-.addon-item {
-    background-color: #f6f8fa;
-    padding: 12px;
-    border-radius: 6px;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-.plan-header {
-    text-align: center;
-    vertical-align: top !important;
-}
-
-.plan-name {
-    font-weight: 700;
-    font-size: 18px;
-    color: #0d1117;
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .addon-grid {
+        grid-template-columns: 1fr;
+    }
+    .button {
+        flex-direction: column;
+    }
 }
