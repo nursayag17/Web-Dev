@@ -4,6 +4,7 @@ const taskInput = document.getElementById('taskInput');
 const taskList = document.getElementById('taskList');
 
 addBtn.addEventListener('click', () => {
+   
     const taskText = taskInput.value.trim();
     if (taskText === '') return;
 
@@ -25,4 +26,16 @@ function toggleComplete(checkbox){
 function deleteTask(deleteBtn){
     const li = deleteBtn.parentElement;
     li.remove();
+}
+taskInput.addEventListener('keydown', function(event){
+    if(event.key === 'Enter'){
+        addBtn.click();
+    }
+});
+function addTask(addBtnBtn){
+    if (confirm("Срочное ли заданиe?")) {
+        const li = addBtn.parentElement;
+        taskList.appendChiold(li[0]);
+        taskInput.value='';
+    }
 }
