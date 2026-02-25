@@ -1,5 +1,44 @@
+<div class="categories">
+  <button (click)="selectCategory('all')" 
+          [class.active]="selectedCategory === 'all'">
+    All
+  </button>
+
+  <button (click)="selectCategory('smartphones')" 
+          [class.active]="selectedCategory === 'smartphones'">
+    Smartphones
+  </button>
+
+
+  <button (click)="selectCategory('gadzhet')" 
+          [class.active]="selectedCategory === 'gadzhet'">
+    Gadgets
+  </button>
+
+</button>
+  <button (click)="selectCategory('headphones')" 
+          [class.active]="selectedCategory === 'headphones'">
+    Headphones
+  </button>
+
+
+  <button (click)="selectCategory('beauty')" 
+          [class.active]="selectedCategory === 'beauty'">
+    Beauty
+  </button>
+
+  <button (click)="selectCategory('health')" 
+          [class.active]="selectedCategory === 'health'">
+    Health
+  </button>
+</div>
+
 <div class="products">
-    @for (item of products; track item.id) {
-      <app-product-card [product]="item"></app-product-card>
-    }
-  </div>
+  <app-product-card
+    *ngFor="let product of filteredProducts"
+    [product]="product"
+    (like)="likeProduct(product)"
+    (delete)="deleteProduct(product.id)"
+  >
+  </app-product-card>
+</div>

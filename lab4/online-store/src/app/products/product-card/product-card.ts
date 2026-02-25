@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../product.model';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
@@ -22,4 +23,14 @@ export class ProductCardComponent {
       `https://t.me/share/url?url=${encodeURIComponent(this.product.link)}&text=${encodeURIComponent(this.product.name)}`;
     window.open(url, '_blank');
   }
+  @Output() like = new EventEmitter<void>();
+@Output() delete = new EventEmitter<void>();
+
+onLike() {
+  this.like.emit();
+}
+
+onDelete() {
+  this.delete.emit();
+}
 }

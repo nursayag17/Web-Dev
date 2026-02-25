@@ -1,110 +1,123 @@
 .card {
-    background: white;
-    border-radius: 14px;
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: 0.2s;
-  }
-  
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  }
-  
-  .card img {
-    width: 100%;
-    height: 220px;
-    object-fit: contain;
-    margin-bottom: 15px;
-  }
-  
-  .card h2 {
-    font-size: 18px;
-    margin: 8px 0;
-  }
-  
-  .card p {
-    flex-grow: 1;   /* ВАЖНО */
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .price {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .rating {
-    color: #f5a623;
-    margin-bottom: 12px;
-  }
-  
-  .rating {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .stars {
-    position: relative;
-    display: inline-block;
-    font-size: 18px;
-    line-height: 1;
-  }
-  
-  .stars-gray {
-    color: #ddd;
-  }
-  
-  .stars-yellow {
-    color: #ffc107;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  
-  .rating-number {
-    font-size: 14px;
-    color: #555;
-  }
- 
-  
-  .buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: auto;
-  }
-  
-  .btn {
-    flex: 1;              
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .kaspi {
-    background: #e60000;
-    color: white;
-  }
-  
-  .whatsapp {
-    background: #25d366;
-    color: white;
-  }
-  
-  .telegram {
-    background: #0088cc;
-    color: white;
-  }
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.card p {
+  font-size: 13px;
+  color: #555;
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.stars {
+  position: relative;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.stars-gray {
+  color: #ddd;
+}
+
+.stars-yellow {
+  color: #ffc107;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.rating-number {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ОСНОВНЫЕ КНОПКИ */
+.main-buttons {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.btn {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.kaspi {
+  background: #e60000;
+  color: white;
+}
+
+.whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.telegram {
+  background: #0088cc;
+  color: white;
+}
+
+/* ЛАЙК + УДАЛИТЬ */
+.secondary-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.like-btn {
+  background: #f2f2f2;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  color: white;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 6px;
+}

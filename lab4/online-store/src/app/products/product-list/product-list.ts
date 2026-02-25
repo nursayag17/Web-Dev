@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Product } from '../product.model';
 import { ProductCardComponent } from '../product-card/product-card';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [ProductCardComponent],
+  imports: [CommonModule,ProductCardComponent],
   templateUrl: './product-list.html',
   styleUrls: ['./product-list.css']
 })
@@ -24,7 +24,9 @@ export class ProductListComponent {
         'https://resources.cdn-kaspi.kz/img/m/p/h8b/h28/85122098180126.jpg',
         'https://resources.cdn-kaspi.kz/img/m/p/h13/hcb/85122098245662.jpg'
       ],
-      link: 'https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000'
+      link: 'https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000',
+      likes: 0,
+      category:'smartphones'
     },
     {
       id: 2,
@@ -38,7 +40,9 @@ export class ProductListComponent {
         'https://resources.cdn-kaspi.kz/img/m/p/hc1/h46/82645744205854.jpg',
         'https://resources.cdn-kaspi.kz/img/m/p/h8a/h3e/82645744271390.jpg'
       ],
-      link: 'https://kaspi.kz/shop/p/samsung-galaxy-s23-ultra-12-gb-256-gb-chernyi-109174566/?c=750000000'
+      link: 'https://kaspi.kz/shop/p/samsung-galaxy-s23-ultra-12-gb-256-gb-chernyi-109174566/?c=750000000',
+      likes: 1,
+      category:'smartphones'
     },
     {
       id: 3,
@@ -48,7 +52,9 @@ export class ProductListComponent {
       rating: 4.9,
       image: 'https://m.media-amazon.com/images/I/619BkvKW35L.jpg',
       images: [],
-      link: 'https://kaspi.kz/shop/p/sony-playstation-5-slim-114696098/?c=750000000'
+      link: 'https://kaspi.kz/shop/p/sony-playstation-5-slim-114696098/?c=750000000',
+       likes: 112,
+      category:'gadzhet'
     },
     {
       id: 4,
@@ -58,7 +64,9 @@ export class ProductListComponent {
       rating: 4.8,
       image: 'https://itmag.kz/upload/iblock/8/61/product_image_103661_1296476.jpg',
       images: [],
-      link: 'https://kaspi.kz/shop/p/apple-macbook-air-13-2024-13-6-16-gb-ssd-512-gb-macos-mxct3-137228009/?c=750000000'
+      link: 'https://kaspi.kz/shop/p/apple-macbook-air-13-2024-13-6-16-gb-ssd-512-gb-macos-mxct3-137228009/?c=750000000',
+       likes: 32,
+      category:'gadzhet'
     },
     {
       id: 5,
@@ -68,7 +76,9 @@ export class ProductListComponent {
       rating: 4.7,
       image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRESKfehxchPuZFCBYWThOyGv05I0y-2Db8kbDRUByzQDmM5d9hSsGWecah8AB7Auqu4b6AcW-Zs0CDkaMeomyt4JbJAJ9MN8JTX0zPMld6a0mUl5YSd5LZUudATrQtHA&usqp=CAc',
       images: [],
-      link: 'https://kaspi.kz/shop/p/naushniki-apple-airpods-pro-2nd-generation-with-wireless-magsafe-charging-case-belyi-113677582/?c=750000000'
+      link: 'https://kaspi.kz/shop/p/naushniki-apple-airpods-pro-2nd-generation-with-wireless-magsafe-charging-case-belyi-113677582/?c=750000000',
+       likes: 16,
+      category:'headphones'
     },
     {
       id: 6,
@@ -78,7 +88,9 @@ export class ProductListComponent {
       rating: 4.2,
       image: 'https://resources.cdn-kaspi.kz/img/m/p/h70/hca/63880820457502.jpg?format=gallery-medium',
       images: [],
-      link: 'https://kaspi.kz/shop/p/samsung-ue43t5300auxce-109-sm-chernyi-100182013/?c=750000000'
+      link: 'https://kaspi.kz/shop/p/samsung-ue43t5300auxce-109-sm-chernyi-100182013/?c=750000000',
+       likes: 21,
+      category:'gadzhet'
     },
     {
       id: 7,
@@ -88,7 +100,9 @@ export class ProductListComponent {
       rating: 4.5,
       image: 'https://resources.cdn-kaspi.kz/img/m/p/h4f/hbc/87174276317214.png?format=gallery-medium',
       images: [],
-      link: 'https://kaspi.kz/shop/p/dyson-airwrap-complete-long-hs05-airstrait-ht01-stailer-sinii-123773739/?c=750000000'
+      link: 'https://kaspi.kz/shop/p/dyson-airwrap-complete-long-hs05-airstrait-ht01-stailer-sinii-123773739/?c=750000000',
+       likes: 43,
+      category:'beauty'
     },
     {
       id: 8,
@@ -98,7 +112,9 @@ export class ProductListComponent {
       rating: 4.5,
       image: 'https://resources.cdn-kaspi.kz/img/m/p/h8d/h6b/84212513603614.png?format=gallery-medium',
       images: [],
-      link: 'https://kaspi.kz/shop/p/logitech-g-pro-x-superlight-2-rozovyi-113957944/?c=750000000'
+      link: 'https://kaspi.kz/shop/p/logitech-g-pro-x-superlight-2-rozovyi-113957944/?c=750000000',
+       likes: 32,
+      category:'gadzhet'
     },
     {
       id: 9,
@@ -108,7 +124,9 @@ export class ProductListComponent {
       rating: 4.2,
       image: 'https://resources.cdn-kaspi.kz/img/m/p/pe4/p8c/27570315.png?format=gallery-medium',
       images: [],
-      link: 'https://kaspi.kz/shop/p/now-omega-3-1000-mg-omega-3-kapsuly-100-sht-107545548/?c=750000000'
+      link: 'https://kaspi.kz/shop/p/now-omega-3-1000-mg-omega-3-kapsuly-100-sht-107545548/?c=750000000',
+       likes: 32,
+      category:'health'
     },
     {
       id: 10,
@@ -118,12 +136,34 @@ export class ProductListComponent {
       rating:  1.1,
       image: 'https://resources.cdn-kaspi.kz/img/m/p/p57/pd2/60906826.jpeg?format=gallery-medium',
       images: [],
-      link: 'https://kaspi.kz/shop/p/kol-e-teosa-tear1-dlina-55-sm-ves-4-55-g-zoloto-fianit-142272088/?c=750000000'
+      link: 'https://kaspi.kz/shop/p/kol-e-teosa-tear1-dlina-55-sm-ves-4-55-g-zoloto-fianit-142272088/?c=750000000',
+       likes: 32,
+      category:'beauty'
     }
-    
-    
-
   ];
+    selectedCategory: string = 'all';
+
+get filteredProducts() {
+  if (this.selectedCategory === 'all') {
+    return this.products;
+  }
+  return this.products.filter(p => p.category === this.selectedCategory);
+}
+
+likeProduct(product: Product) {
+  product.likes++;
+}
+
+deleteProduct(id: number) {
+  this.products = this.products.filter(p => p.id !== id);
+}
+
+selectCategory(category: string) {
+  this.selectedCategory = category;
+}
+
+
+  
   
 
 }
