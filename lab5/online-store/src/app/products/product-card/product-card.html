@@ -1,0 +1,39 @@
+<div class="card">
+    <img [src]="product.image" alt="{{ product.name }}" />
+  
+    <h2>{{ product.name }}</h2>
+  
+    <p>{{ product.description }}</p>
+  
+    <div class="price">{{ product.price }} ₸</div>
+    <div class="rating">
+        <div class="stars">
+          <div class="stars-gray">★★★★★</div>
+          <div 
+            class="stars-yellow"
+            [style.width.%]="(product.rating / 5) * 100"
+          >
+            ★★★★★
+          </div>
+        <span class="rating-number">{{ product.rating }}</span>
+      </div>
+  
+
+    <div class="buttons">
+        <a 
+          [href]="product.link" 
+          target="_blank" 
+          class="btn kaspi"
+        >
+          Open in Kaspi
+        </a>
+      
+        <button class="btn whatsapp" (click)="openWhatsApp()">
+          WhatsApp
+        </button>
+      
+        <button class="btn telegram" (click)="openTelegram()">
+          Telegram
+        </button>
+      </div>
+  </div>

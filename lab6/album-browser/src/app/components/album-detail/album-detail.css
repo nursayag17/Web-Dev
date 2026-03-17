@@ -1,0 +1,28 @@
+.container{
+    width:500px;
+    margin:60px auto;
+    padding:30px;
+    background:#eee6fb;
+    border-radius:10px;
+    text-align:center;
+  }
+  
+  input{
+    padding:6px;
+    margin-top:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+  }
+  
+  button{
+    margin:10px 5px;
+    padding:6px 14px;
+    border:none;
+    border-radius:6px;
+    background:#cbb6f5;
+    cursor:pointer;
+  }
+  
+  button:hover{
+    background:#b89ff2;
+  }

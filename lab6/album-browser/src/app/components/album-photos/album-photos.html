@@ -1,0 +1,21 @@
+<h2>Album Photos</h2>
+
+<div *ngIf="photos">
+
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
+
+<div *ngFor="let photo of photos">
+
+<img [src]="photo.thumbnailUrl">
+
+<p>{{ photo.title }}</p>
+
+</div>
+
+</div>
+
+</div>
+
+<br>
+
+<button (click)="goBack()">Back</button>

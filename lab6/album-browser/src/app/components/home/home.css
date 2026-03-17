@@ -1,0 +1,21 @@
+.container{
+  width:600px;
+  margin:120px auto;
+  background:#e9ddfb;
+  padding:40px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+button{
+  background:gray;
+  border:none;
+  padding:10px 20px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#b89ff2;
+}

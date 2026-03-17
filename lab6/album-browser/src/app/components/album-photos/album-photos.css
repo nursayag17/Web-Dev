@@ -1,0 +1,31 @@
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+  }
+  
+  .photo-card {
+    text-align: center;
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .photo-card {
+    text-align: center;
+    padding: 10px;
+    background: #f4f0fa;
+    border-radius: 8px;
+  }
+  
+  .photo-card img {
+    width: 100%;
+    border-radius: 6px;
+  }
